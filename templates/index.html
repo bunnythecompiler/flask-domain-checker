@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            domain checker
+        </title>
+        <style>
+            .forms{
+                margin: 1rem 0; 
+                text-align: center;
+                padding-top: 5pc;
+            }
+
+
+            .results{
+                text-align: center;
+                background-color: lightgrey;
+                border: 1px #ccc solid;
+            }
+            .heading h1{
+                text-align: center;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div class="heading">
+            <h1><strong>Domain Checker</strong></h1>
+        </div>
+        <div class="forms">
+            <form name="myform" method="POST">
+                Domain Name:<input type="text" name="domain" placeholder="abc.com">
+                    <input type="submit" name="submit">
+            </form>
+        </div>
+        <div class="results">
+            {% for i in data %}
+                <p>{{ i }}</p>
+            {% endfor %}
+        </div>
+    </body>
+</html>
